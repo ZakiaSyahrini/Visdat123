@@ -39,10 +39,10 @@ data.set_index('date', inplace=True)
 #data.head(5)
 
 # Make a list of the unique values from the region column: regions_list
-regions_list = data.location.unique().tolist()
+#regions_list = data.location.unique().tolist()
 
 # Make a color mapper: color_mapper
-color_mapper = CategoricalColorMapper(factors=regions_list, palette=Spectral6)
+#color_mapper = CategoricalColorMapper(factors=regions_list, palette=Spectral6)
 
 #define beberapa variabel untuk membuat peta dengan cartodbpositron
 inProj = Proj(init='epsg:3857')
@@ -124,13 +124,7 @@ data_select = Select(
 
 data_select.on_change('value', update_plot)
 
-#data_select1 = Select(
- #   options=['new_cases', 'new_deaths',	'new_recovered', 'new_activeCases', 'total_cases', 'total_deaths',	'total_recovered', 'total_activeCases'],
-  #  value='total_death',
-   # title='y-axis data'
-#)
 
-#data_select1.on_change('value', update_plot)
 
 #memasukan seluruh fitur interaktif dan juga plotingan kedalam layout
 layout = row(widgetbox(dPicker, data_select), plot) 
