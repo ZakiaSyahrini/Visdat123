@@ -36,7 +36,7 @@ import warnings
 data = pd.read_csv("./data/owid-covid-data.csv")
 data.set_index('date', inplace=True)
 
-data.head(5)
+#data.head(5)
 
 # Make a list of the unique values from the region column: regions_list
 regions_list = data.location.unique().tolist()
