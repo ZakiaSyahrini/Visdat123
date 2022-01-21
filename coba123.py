@@ -33,7 +33,7 @@ from bokeh.tile_providers import get_provider, WIKIMEDIA, CARTODBPOSITRON, STAME
 
 import warnings
 
-data = pd.read_csv("owid-covid-data.csv")
+data = pd.read_csv("./data/owid-covid-data.csv")
 data.set_index('date', inplace=True)
 
 data.head(5)
